@@ -1,0 +1,39 @@
+#contact {
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact #social-network {
+  display: flex;
+  justify-content: center;
+}
+
+#contact #social-network a {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  font-size: 2em;
+  color: white;
+  transition: 0.5s;
+  padding: 0.4em;
+  box-shadow: 0px 0px 10px 0px #7f00ff;
+}
+
+#contact #social-network a:hover {
+  box-shadow: 0px 0px 10px 0px #e100ff;
+  text-shadow: 2px 2px 20px white;
+  text-decoration: none;
+}
+
+#contact .answer-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+  font-size: 1.3em;
+  text-align: center;
+  font-weight: 800;
+}

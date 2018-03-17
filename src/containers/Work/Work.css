@@ -1,0 +1,15 @@
+#works {
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#works section {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  grid-gap: 4rem;
+}

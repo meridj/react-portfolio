@@ -1,0 +1,67 @@
+.form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
+  width: 60%;
+}
+
+.form label {
+  display: none;
+}
+
+.form input[type='text'],
+.form input[type='email'] {
+  font-size: 1.1em;
+  width: 90%;
+  outline: none;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 0px;
+  border: none;
+  padding: 1.5em;
+}
+
+.form .textarea {
+  font-size: 1.1em;
+  width: 90%;
+  resize: none;
+  color: white;
+  background-color: #1e1e1e;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  padding: 1.5em;
+}
+
+.form .button {
+  color: black;
+  width: 90%;
+  padding: 1em;
+  background: white;
+  border: 2px solid #7f00ff;
+  font-weight: 800;
+  font-variant: small-caps;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+  margin: 0 auto;
+}
+
+.form .button:hover {
+  background: #7f00ff;
+  color: white;
+}
+
+.form .button:disabled {
+  color: black;
+  background: grey;
+  cursor: inherit;
+}
+
+.form .button:disabled:hover {
+  background: grey;
+  color: black;
+}

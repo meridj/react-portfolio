@@ -1,0 +1,19 @@
+#skills {
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#skills section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+}
+
+#skills #work-with-text {
+  margin-top: 3em;
+  margin-left: 3em;
+  font-weight: 800;
+}

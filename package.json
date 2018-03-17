@@ -1,0 +1,27 @@
+{
+  "name": "react-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass-chokidar": "^1.1.2",
+    "npm-run-all": "^4.1.2",
+    "rc-progress": "^2.2.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-ionicons": "^2.1.6",
+    "react-modal": "^3.3.2",
+    "react-reveal": "^1.2.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-snowstorm": "0.0.2",
+    "react-text-loop": "^1.1.0",
+    "react-typist": "^2.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "node scripts/test.js --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

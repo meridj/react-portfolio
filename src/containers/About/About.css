@@ -1,0 +1,13 @@
+#about {
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#about #presentation-photo {
+  box-shadow: 0px 0px 17px 0px #7f00ff;
+  background-image: url('../../assets/mehdi.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,37 @@
+.theme-techno-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.theme-techno-name {
+  font-style: italic;
+  text-align: center;
+}
+
+.techno-name-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  margin-top: 1.2em;
+}
+
+.techno-name {
+  background: -webkit-linear-gradient(#7f00ff, #e100ff);
+  margin: 0.5em;
+  text-align: center;
+  border-radius: 1px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  font-size: 1.2em;
+  list-style: none;
+}
