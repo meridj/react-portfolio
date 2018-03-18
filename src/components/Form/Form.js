@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Components
 import Fade from 'react-reveal/Fade';
+import Input from '../../components/Input';
 
 // Styles
 import './Form.css';
@@ -18,6 +19,7 @@ import './Form.css';
 class Form extends Component {
   constructor(props) {
     super(props);
+    console.log(this);
     this.state = {
       firstname: '',
       name: '',
@@ -39,6 +41,18 @@ class Form extends Component {
     return reg.test(this.state.email);
   }
 
+  checkValue() {
+    if (
+      this.checkMail() &&
+      this.state.firstname.trim().length &&
+      this.state.name.trim().length &&
+      this.state.message.trim().length
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     this.props.handleValidateForm();
@@ -53,12 +67,7 @@ class Form extends Component {
 
   handleChange(event, field) {
     this.setState({ [field]: event.target.value }, () => {
-      if (
-        this.checkMail() &&
-        this.state.firstname.length > 0 &&
-        this.state.name.length > 0 &&
-        this.state.message.length > 0
-      ) {
+      if (this.checkValue()) {
         this.setState({ disabled: false });
       } else {
         this.setState({ disabled: true });
@@ -68,80 +77,50 @@ class Form extends Component {
 
   render() {
     return (
-      <form
-        method="POST"
-        action="/contact"
-        onSubmit={event => this.handleSubmit(event)}
-        className="form">
-        <Fade left>
-          <label htmlFor="firstname">Firstname</label>
-          <input
+      <Fade>
+        <form onSubmit={event => this.handleSubmit(event)} className="form">
+          <Input
             id="firstname"
-            name="firstname"
+            type="text"
+            className="input"
             value={this.state.firstname}
-            onChange={event => this.handleChange(event, 'firstname')}
-            className="input"
+            onChange={this.handleChange}
             placeholder="Firstname"
-            type="text"
           />
-        </Fade>
-        <Fade right delay={300}>
-          <label htmlFor="name">Name</label>
-          <input
+          <Input
             id="name"
-            name="name"
+            type="text"
+            className="input"
             value={this.state.name}
-            onChange={event => this.handleChange(event, 'name')}
-            className="input"
+            onChange={this.handleChange}
             placeholder="Name"
-            type="text"
           />
-        </Fade>
-        <Fade left delay={500}>
-          <label htmlFor="email">Email</label>
-          <input
+          <Input
             id="email"
-            name="email"
-            value={this.state.email}
-            onChange={event => this.handleChange(event, 'email')}
-            className="input"
-            placeholder="Email"
             type="email"
+            className="input"
+            value={this.state.email}
+            onChange={this.handleChange}
+            placeholder="Email"
           />
-        </Fade>
-
-        <Fade top delay={700}>
-          <textarea
-            name="message"
-            value={this.state.message}
-            onChange={event => this.handleChange(event, 'message')}
-            cols="50"
-            rows="13"
+          <Input
+            id="message"
+            textarea
             className="textarea"
+            value={this.state.message}
+            onChange={this.handleChange}
             placeholder="Mehdi, i need you ... !"
-            type="text"
           />
-        </Fade>
-        {!this.state.disabled ? (
           <Fade>
-            <input
+            <button
               disabled={this.state.disabled}
-              value="Send"
               className="button"
-              type="submit"
-            />
+              type="submit">
+              {this.state.disabled ? 'Complete the form' : 'Send'}
+            </button>
           </Fade>
-        ) : (
-          <Fade>
-            <input
-              disabled={this.state.disabled}
-              value="Complete the form"
-              className="button"
-              type="submit"
-            />
-          </Fade>
-        )}
-      </form>
+        </form>
+      </Fade>
     );
   }
 }

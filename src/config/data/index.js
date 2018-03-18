@@ -1,3 +1,5 @@
-import dataCardWork from "./dataCardWork";
+import works from './works';
+import mojos from './mojos';
+import skills from './skills';
 
-export default dataCardWork;
+export { works, mojos, skills };

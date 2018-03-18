@@ -53,7 +53,7 @@ class Loading extends Component {
           </Fade>
           <Fade bottom duration={3000} delay={700}>
             <h2 className="loading-text-build">
-              build with react / redux, node and{' '}
+              build with react, node and{' '}
               <span style={{ fontWeight: '800' }}>love</span> !
             </h2>
           </Fade>

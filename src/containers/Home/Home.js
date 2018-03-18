@@ -18,7 +18,7 @@ import './Home.css';
 const Home = () => {
   return (
     <main id="home">
-      <Header text="Mehdi Meirjda aka : meridj" comeFrom="home" />
+      <Header text="Mehdi Meridja aka : meridj" comeFrom="home" />
       <Fade duration={6000} delay={200}>
         <h1 id="home-text">
           Hi, i'm an enthousiast <br />

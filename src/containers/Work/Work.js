@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Config
-import dataCardWork from '../../config/data';
+import { works } from '../../config/data';
 
 // Components
 import Title from '../../components/Title';
@@ -24,8 +24,8 @@ const Work = () => {
       <Header text="Let's take a look" comeFrom="works" />
       <Title title="My work" />
       <section>
-        {dataCardWork.map((data, key) => {
-          return <CardWork data={data} key={key} />;
+        {works.map((work, key) => {
+          return <CardWork data={work} key={key} />;
         })}
       </section>
     </div>

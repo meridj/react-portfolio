@@ -60,7 +60,7 @@ const Modal = props => {
         </div>
         <div className="content-container">
           <div>
-            <img width="100%" src={props.data.img1} alt={props.data.img1} />
+            <img width="100%" src={props.data.img} alt={props.data.img} />
             <div className="text-presentation-work-modal-container">
               <p className="text-presentation-work-modal">{props.data.text}</p>
             </div>
