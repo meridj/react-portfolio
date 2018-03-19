@@ -1,82 +1,67 @@
-.modal-container {
-  height: 100%;
+.Modal {
   display: flex;
-  flex-direction: column;
-}
-
-.header-container {
-  flex-grow: 0.03;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  background-image: linear-gradient(
+    to right top,
+    rgb(10, 10, 10) 10%,
+    rgb(30, 30, 30) 70%,
+    rgb(47, 47, 47) 100%
+  );
+  position: absolute;
+  top: 10rem;
+  bottom: 10rem;
+  right: 10rem;
+  left: 10rem;
+  z-index: 1;
+  border: 3px solid white;
+  cursor: auto;
+  opacity: 1 !important;
 }
 
-.content-container {
-  margin-top: 10vh;
-  flex-grow: 0.97;
-}
-
-#icon-close-container {
+.Overlay {
   cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(270, 100%, 50%, 0.233),
+    hsla(293, 100%, 50%, 0.205)
+  );
+}
+
+.closed {
+  cursor: pointer;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+#work-description {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title-modal {
-  color: white;
-  background: -webkit-linear-gradient(#7f00ff, #e100ff);
-  width: 0.3em;
-  font-weight: 800;
-  font-size: 5vh;
-}
-
-.text-presentation-work-modal-container {
-  margin-top: 3vh;
-  justify-content: center;
-  display: flex;
-}
-
-.text-presentation-work-modal {
-  width: 85%;
-  line-height: 4.5vh;
-  text-align: justify;
-  font-size: 3vh;
-}
-
-.link-to-website {
-  outline: none !important;
-  text-decoration: none;
-  color: none;
-  border: none;
-}
-
-.link-to-website:hover {
-  color: none;
-  border: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.link-to-website:active {
-  color: none;
-  border: none;
-  text-decoration: none;
-  outline: none;
-}
-
-.link-to-website:focus {
-  color: none;
-  border: none;
-  text-decoration: none;
-  outline: none !important;
-}
-
-.link-to-website-container {
-  margin-top: 3vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2em;
+}
+
+#work-description h4 {
+  box-shadow: 2px 2px 20px #7f00ff;
+  background: -webkit-linear-gradient(#7f00ff, #e100ff);
+  width: 0.2%;
+  align-self: flex-start;
+  text-align: center;
+  border-radius: 1px;
+  padding: 0.5em;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#work-description p {
+  margin: 5em;
+  font-size: 1.3em;
+  line-height: 1.9em;
+  text-align: center;
 }

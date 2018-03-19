@@ -25,7 +25,6 @@ class Header extends Component {
       works: false,
       contact: false
     };
-
     this.handleClickNav = this.handleClickNav.bind(this);
   }
 

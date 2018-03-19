@@ -15,7 +15,7 @@ import './Title.css';
  */
 const Title = props => {
   return (
-    <Fade>
+    <Fade left>
       <h2 className={'title'}>{props.title}</h2>
     </Fade>
   );

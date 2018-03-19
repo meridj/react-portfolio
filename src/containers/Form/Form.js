@@ -80,33 +80,29 @@ class Form extends Component {
       <Fade>
         <form onSubmit={event => this.handleSubmit(event)} className="form">
           <Input
-            id="firstname"
+            name="firstname"
             type="text"
-            className="input"
             value={this.state.firstname}
             onChange={this.handleChange}
             placeholder="Firstname"
           />
           <Input
-            id="name"
+            name="name"
             type="text"
-            className="input"
             value={this.state.name}
             onChange={this.handleChange}
             placeholder="Name"
           />
           <Input
-            id="email"
+            name="email"
             type="email"
-            className="input"
             value={this.state.email}
             onChange={this.handleChange}
             placeholder="Email"
           />
           <Input
-            id="message"
+            name="message"
             textarea
-            className="textarea"
             value={this.state.message}
             onChange={this.handleChange}
             placeholder="Mehdi, i need you ... !"

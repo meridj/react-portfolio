@@ -8,34 +8,6 @@
   width: 60%;
 }
 
-.form label {
-  display: none;
-}
-
-.form input[type='text'],
-.form input[type='email'] {
-  font-size: 1.1em;
-  width: 90%;
-  outline: none;
-  background-color: #1e1e1e;
-  color: white;
-  border-radius: 0px;
-  border: none;
-  padding: 1.5em;
-}
-
-.form .textarea {
-  font-size: 1.1em;
-  width: 90%;
-  resize: none;
-  color: white;
-  background-color: #1e1e1e;
-  border-radius: 0px;
-  border: none;
-  outline: none;
-  padding: 1.5em;
-}
-
 .form .button {
   color: black;
   width: 90%;
