@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 // Components
 import Title from '../../components/Title';
-import Form from '../../components/Form';
+import Form from '../Form';
 import Header from '../../components/Header';
 
 // Styles

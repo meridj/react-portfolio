@@ -19,8 +19,8 @@ import './styles/index.css';
 
 /**
  *
- * State Full Container: Root
- * Usage : render root container
+ * State Full Container: App
+ * Usage : render App container
  * @param props => none
  *
  */

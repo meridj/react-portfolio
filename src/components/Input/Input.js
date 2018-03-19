@@ -1,5 +1,12 @@
 import React from 'react';
 
+/**
+ *
+ * State Less Container: App
+ * Usage : render App container
+ * @param props => textarea, type, onChange, value, id, placeholder, className
+ *
+ */
 const Input = ({
   textarea,
   type,

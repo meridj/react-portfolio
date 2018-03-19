@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 // Components
-import Typist from 'react-typist';
-import { withRouter } from 'react-router-dom';
+import Nav from '../../components/Nav';
 
 // Styles
 import './Header.css';
@@ -10,7 +11,7 @@ import './Header.css';
 /**
  *
  * State Full Component: Header
- * Usage : render a header that push my routes navigation
+ * Usage : render a header
  * @param props => { comeFrom, text }
  *
  */
@@ -24,82 +25,32 @@ class Header extends Component {
       works: false,
       contact: false
     };
+
+    this.handleClickNav = this.handleClickNav.bind(this);
   }
 
   componentWillMount() {
-    if (this.props.comeFrom === 'home') {
-      this.setState({
-        home: true
-      });
-    }
-    if (this.props.comeFrom === 'about') {
-      this.setState({
-        about: true
-      });
-    }
-    if (this.props.comeFrom === 'skills') {
-      this.setState({
-        skills: true
-      });
-    }
-    if (this.props.comeFrom === 'works') {
-      this.setState({
-        works: true
-      });
-    }
-    if (this.props.comeFrom === 'contact') {
-      this.setState({
-        contact: true
-      });
-    }
+    this.setState({ [this.props.comeFrom]: true });
   }
 
-  handleClickNav = (event, route) => {
+  handleClickNav(event, route) {
     event.preventDefault();
     this.props.history.push(route);
-  };
+  }
 
   render() {
+    const { text } = this.props;
     return (
-      <header className={'header-no-opacity'}>
-        <div onClick={event => this.handleClickNav(event, '/')}>
-          <span>></span>{' '}
-          <Typist
-            cursor={{
-              show: false
-            }}
-            className="typist">
-            {this.props.text}
-          </Typist>{' '}
-          <span id="cursor">|</span>
-        </div>
-        <nav>
-          <ul>
-            <li
-              onClick={event => this.handleClickNav(event, '/about')}
-              className={this.state.about ? 'li-active' : null}>
-              About me
-            </li>
-            <li
-              onClick={event => this.handleClickNav(event, '/skills')}
-              className={this.state.skills ? 'li-active' : null}>
-              Skills & Cie
-            </li>
-            <li
-              onClick={event => this.handleClickNav(event, '/works')}
-              className={this.state.works ? 'li-active' : null}>
-              Work
-            </li>
-            <li
-              onClick={event => this.handleClickNav(event, '/contact')}
-              className={this.state.contact ? 'li-active' : null}>
-              Contact me
-            </li>
-          </ul>
-        </nav>
+      <header>
+        <Nav text={text} isActive={this.state} onClick={this.handleClickNav} />
       </header>
     );
   }
 }
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+  comeFrom: PropTypes.string.isRequired
+};
 
 export default withRouter(Header);

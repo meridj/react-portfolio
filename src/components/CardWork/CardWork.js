@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Zoom from 'react-reveal/Zoom';
 
 // Components
-import Zoom from 'react-reveal/Zoom';
 import Modal from '../Modal';
 
 // Styles
@@ -38,19 +39,20 @@ class CardWork extends Component {
   }
 
   render() {
+    const { data } = this.props;
     return (
       <div>
         <Zoom>
           <div
             onClick={event => this.handleOpenModal(event)}
             className="card-container">
-            <h4 id="title-work">{this.props.data.title}</h4>
-            <h5 id="subtitle-work">{this.props.data.techno}</h5>
-            <p id="text-work">{this.props.data.littleText}</p>
+            <h4 id="title-work">{data.title}</h4>
+            <h5 id="subtitle-work">{data.techno}</h5>
+            <p id="text-work">{data.littleText}</p>
           </div>
         </Zoom>
         <Modal
-          data={this.props.data}
+          data={data}
           modal={this.state.modal}
           handleCloseModal={this.handleCloseModal}
         />
@@ -58,5 +60,9 @@ class CardWork extends Component {
     );
   }
 }
+
+CardWork.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
 export default CardWork;

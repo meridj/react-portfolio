@@ -13,14 +13,14 @@ import './SkillsCategory.css';
  * @param props => { title }
  *
  */
-const SkillsCategory = props => {
+const SkillsCategory = ({ technoName, title }) => {
   return (
     <div className={'theme-techno-container'}>
       <Fade top>
-        <h4 className={'theme-techno-name'}>{props.title}</h4>
+        <h4 className={'theme-techno-name'}>{title}</h4>
       </Fade>
       <ul className={'techno-name-container'}>
-        {props.technoName.map((t, key) => (
+        {technoName.map((t, key) => (
           <Fade key={key} bottom duration={1000}>
             <li className={'techno-name'}>{t}</li>
           </Fade>
