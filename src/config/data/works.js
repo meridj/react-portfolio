@@ -5,6 +5,7 @@ const works = [
   {
     title: 'Stromboli',
     img: test1,
+    github: false,
     link: 'http://www.google.fr/',
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
@@ -27,6 +28,8 @@ const works = [
     title: 'Stromboli',
     img: test1,
     link: 'http://www.google.fr/',
+    github: true,
+    linkGithub: 'https://github.com/meridj/emaily',
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
             sed do eiusmod tempor incididunt
@@ -47,6 +50,7 @@ const works = [
   {
     title: 'Stromboli',
     img: test1,
+    github: false,
     link: 'http://www.google.fr/',
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
@@ -69,6 +73,8 @@ const works = [
     title: 'Stromboli',
     img: test1,
     link: 'http://www.google.fr/',
+    github: true,
+    linkGithub: 'https://github.com/meridj/emaily',
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
             sed do eiusmod tempor incididunt
@@ -90,6 +96,7 @@ const works = [
     title: 'Stromboli',
     img: test1,
     link: 'http://www.google.fr/',
+    github: false,
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
             sed do eiusmod tempor incididunt
@@ -111,6 +118,8 @@ const works = [
     title: 'Stromboli',
     img: test1,
     link: 'http://www.google.fr/',
+    github: true,
+    linkGithub: 'https://github.com/meridj/emaily',
     littleText: `Lorem ipsum dolor sit amet,
             consectetur adipisicing elit,
             sed do eiusmod tempor incididunt

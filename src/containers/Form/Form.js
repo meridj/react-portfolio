@@ -108,12 +108,12 @@ class Form extends Component {
             placeholder="Mehdi, i need you ... !"
           />
           <Fade>
-            <button
+            <input
               disabled={this.state.disabled}
-              className="button"
-              type="submit">
-              {this.state.disabled ? 'Complete the form' : 'Send'}
-            </button>
+              className="submit"
+              type="submit"
+              value={this.state.disabled ? 'Complete the form' : 'Send'}
+            />
           </Fade>
         </form>
       </Fade>

@@ -26,16 +26,16 @@ import './styles/index.css';
  */
 class App extends Component {
   state = {
-    loading: true
+    loading: false
   };
 
-  componentDidMount() {
+  /*componentDidMount() {
     setTimeout(() => {
       this.setState({
         loading: false
       });
     }, 4500);
-  }
+  }*/
 
   render() {
     return (

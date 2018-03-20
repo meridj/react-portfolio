@@ -5,10 +5,10 @@
   justify-content: center;
   align-items: center;
   padding: 4em;
-  width: 60%;
+  width: 80em;
 }
 
-.form .button {
+.submit {
   color: black;
   width: 90%;
   padding: 1em;
@@ -22,18 +22,18 @@
   margin: 0 auto;
 }
 
-.form .button:hover {
+.submit:hover {
   background: #7f00ff;
   color: white;
 }
 
-.form .button:disabled {
+.submit:disabled {
   color: black;
   background: grey;
   cursor: inherit;
 }
 
-.form .button:disabled:hover {
+.submit:disabled:hover {
   background: grey;
   color: black;
 }
