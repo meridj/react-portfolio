@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Typist from 'react-typist';
 import { withRouter } from 'react-router-dom';
 
 // Components
 import Nav from '../../components/Nav';
+import { Desktop, TabletAndMobile } from '../Responsive';
+import Menu from '../Menu';
 
 // Styles
 import './Header.css';
@@ -41,7 +44,23 @@ class Header extends Component {
     const { text } = this.props;
     return (
       <header>
-        <Nav text={text} isActive={this.state} onClick={this.handleClickNav} />
+        <div onClick={event => this.handleClickNav(event, '/')}>
+          <span>></span>{' '}
+          <Typist cursor={{ show: false }} className="typist">
+            {text}
+          </Typist>
+          <span id="cursor">|</span>
+        </div>
+        <Desktop>
+          <Nav
+            text={text}
+            isActive={this.state}
+            onClick={this.handleClickNav}
+          />
+        </Desktop>
+        <TabletAndMobile>
+          <Menu />
+        </TabletAndMobile>
       </header>
     );
   }

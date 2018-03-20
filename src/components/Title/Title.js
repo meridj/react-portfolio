@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Fade from 'react-reveal/Fade';
@@ -13,12 +14,14 @@ import './Title.css';
  * @param props => { title }
  *
  */
-const Title = props => {
-  return (
-    <Fade left>
-      <h2 className={'title'}>{props.title}</h2>
-    </Fade>
-  );
+const Title = ({ title }) => (
+  <Fade left>
+    <h2 className="title">{title}</h2>
+  </Fade>
+);
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired
 };
 
 export default Title;

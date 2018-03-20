@@ -1,4 +1,4 @@
-.loading-container {
+#loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,8 @@
   background-attachment: fixed;
 }
 
-.loading-text-container {
+#loading-text {
+  flex-grow: 0.99;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -23,15 +24,29 @@
   align-items: center;
 }
 
-.loading-text-welcome {
+#welcome {
   text-align: center;
-  padding: 2vh;
-  font-weight: 400;
-  line-height: 12vh;
-  font-size: 9vh;
+  font-size: 5rem;
 }
 
-.loading-text-build {
+#build {
   text-align: center;
-  padding: 2vh;
+}
+
+.build-techno {
+  font-weight: 800;
+  background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 20px #7f00ff;
+}
+
+#love {
+  box-shadow: 2px 2px 20px #7f00ff;
+  text-shadow: 2px 2px 20px white;
+  font-weight: 800;
+  margin: 0.2em;
+  font-style: italic;
+  padding: 0.2em 0.5em;
+  background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
 }

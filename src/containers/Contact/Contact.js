@@ -54,7 +54,7 @@ class Contact extends Component {
         </div>
         <Form handleValidateForm={this.handleValidateForm} />
         {this.state.formValidate ? (
-          <Fade duration={1000} top>
+          <Fade bottom cascade duration={1000}>
             <p className="answer-text">
               Great ! I will answer as soon as possible !
             </p>

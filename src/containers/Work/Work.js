@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Config
+// Datas
 import { works } from '../../config/data';
 
 // Components
@@ -18,18 +18,16 @@ import './Work.css';
  * @param props => none
  *
  */
-const Work = () => {
-  return (
-    <div id="works">
-      <Header text="Let's take a look" comeFrom="works" />
-      <Title title="My work" />
-      <section>
-        {works.map((work, key) => {
-          return <CardWork data={work} key={key} />;
-        })}
-      </section>
-    </div>
-  );
-};
+const Work = () => (
+  <div id="works">
+    <Header text="Let's take a look" comeFrom="works" />
+    <Title title="My work" />
+    <section>
+      {works.map((work, key) => {
+        return <CardWork data={work} key={key} />;
+      })}
+    </section>
+  </div>
+);
 
 export default Work;

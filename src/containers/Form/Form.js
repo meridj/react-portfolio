@@ -29,6 +29,7 @@ class Form extends Component {
       validateSubmit: false
     };
     this.checkMail = this.checkMail.bind(this);
+    this.checkValue = this.checkValue.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }

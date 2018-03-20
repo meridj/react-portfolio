@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Typist from 'react-typist';
 
 // Styles
 import './Nav.css';
@@ -14,17 +13,6 @@ import './Nav.css';
  */
 const Nav = ({ onClick, isActive, text }) => (
   <nav>
-    <div onClick={event => onClick(event, '/')}>
-      <span>></span>{' '}
-      <Typist
-        cursor={{
-          show: false
-        }}
-        className="typist">
-        {text}
-      </Typist>
-      <span id="cursor">|</span>
-    </div>
     <ul>
       <li
         onClick={event => onClick(event, '/about')}

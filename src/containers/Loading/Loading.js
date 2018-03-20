@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-// Components
 import { Line } from 'rc-progress';
 import Fade from 'react-reveal/Fade';
 
@@ -38,7 +36,7 @@ class Loading extends Component {
 
   render() {
     return (
-      <div className="loading-container">
+      <div id="loading-container">
         <Line
           style={{ width: '100%', flexGrow: '0.01' }}
           strokeLinecap="butt"
@@ -47,14 +45,16 @@ class Loading extends Component {
           strokeColor="#7f00ff"
           trailColor="rgb(47, 47, 47)"
         />
-        <div className="loading-text-container" style={{ flexGrow: '0.99' }}>
+        <div id="loading-text">
           <Fade duration={3000} delay={700}>
-            <h1 className="loading-text-welcome">Welcome to my portfolio</h1>
+            <h1 id="welcome">Welcome to my portfolio</h1>
           </Fade>
           <Fade bottom duration={3000} delay={700}>
-            <h2 className="loading-text-build">
-              build with react, node and{' '}
-              <span style={{ fontWeight: '800' }}>love</span> !
+            <h2 id="build">
+              build from scratch with
+              <span className="build-techno"> react</span>,
+              <span className="build-techno"> node</span> and
+              <span id="love">love .</span>
             </h2>
           </Fade>
         </div>
