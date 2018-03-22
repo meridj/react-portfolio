@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Typist from 'react-typist';
 import { withRouter } from 'react-router-dom';
+import Ionicon from 'react-ionicons';
 
 // Components
 import Nav from '../../components/Nav';
@@ -26,9 +27,11 @@ class Header extends Component {
       about: false,
       skills: false,
       works: false,
-      contact: false
+      contact: false,
+      menu: false
     };
     this.handleClickNav = this.handleClickNav.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   componentWillMount() {
@@ -38,6 +41,12 @@ class Header extends Component {
   handleClickNav(event, route) {
     event.preventDefault();
     this.props.history.push(route);
+  }
+
+  toggleMenu() {
+    this.setState({
+      menu: !this.state.menu
+    });
   }
 
   render() {
@@ -59,7 +68,19 @@ class Header extends Component {
           />
         </Desktop>
         <TabletAndMobile>
-          <Menu />
+          <Ionicon
+            style={{ margin: '1em' }}
+            icon={this.state.menu ? 'ios-close' : 'ios-menu'}
+            fontSize="40px"
+            onClick={() => this.toggleMenu()}
+            color="white"
+          />
+          <Menu
+            onClick={this.handleClickNav}
+            isActive={this.state}
+            toggleMenu={this.toggleMenu}
+            menu={this.state.menu}
+          />
         </TabletAndMobile>
       </header>
     );

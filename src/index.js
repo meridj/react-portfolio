@@ -26,7 +26,7 @@ import './styles/index.css';
  */
 class App extends Component {
   state = {
-    loading: false
+    loading: true
   };
 
   /*  componentDidMount() {
