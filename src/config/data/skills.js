@@ -19,7 +19,7 @@ const skills = [
     technoName: ['NodeJs', 'ExpressJs', 'GraphQL', 'Rest', 'MongoDB']
   },
   {
-    title: 'Client Side',
+    title: 'Tools',
     technoName: ['Git', 'Trello', 'Slack', 'Gulp', 'Webpack']
   }
 ];

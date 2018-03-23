@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactMenu from 'react-modal';
-
+import Ionicon from 'react-ionicons';
 import './Menu.css';
 
 ReactMenu.setAppElement('#root');
@@ -9,10 +9,17 @@ const Menu = ({ menu, children, toggleMenu, onClick, isActive }) => {
   return (
     <ReactMenu
       className="Menu menu-enter"
-      overlayClassName="Overlay"
+      overlayClassName={'none'}
       onRequestClose={toggleMenu}
       isOpen={menu}
       aria={{ labelledby: 'title-modal' }}>
+      <Ionicon
+        style={{ margin: '1em' }}
+        icon="md-close"
+        fontSize="35px"
+        onClick={() => toggleMenu()}
+        color="white"
+      />
       <nav id="nav">
         <ul id="ul-menu">
           <li

@@ -5,7 +5,7 @@ header {
   right: 0;
   left: 0;
   height: 3rem;
-  background-image: linear-gradient(to right top, #1e1e1e 70%, #2f2f2f 100%);
+  background: #1e1e1e;
   width: 100%;
   display: flex !important;
   flex-direction: row;
@@ -22,6 +22,10 @@ header {
 
 header div {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 header div span {
@@ -49,5 +53,39 @@ header div span {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  .typist {
+    font-size: 0.9em;
+  }
+  #cursor {
+    padding: 0.2em;
+    -webkit-animation: blink-cursor 0.9s both infinite;
+    animation: blink-cursor 0.9s both infinite;
+  }
+  header div span {
+    padding: 0 0.5em;
+    font-size: 1em;
+    font-weight: 300 !important;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
+  .typist {
+    font-size: 1.1em;
+  }
+
+  #cursor {
+    padding: 0.2em;
+    -webkit-animation: blink-cursor 0.9s both infinite;
+    animation: blink-cursor 0.9s both infinite;
+  }
+
+  header div span {
+    padding: 0 0.5em;
+    font-size: 1em;
+    font-weight: 300 !important;
   }
 }

@@ -70,8 +70,8 @@ class Header extends Component {
         <TabletAndMobile>
           <Ionicon
             style={{ margin: '1em' }}
-            icon={this.state.menu ? 'ios-close' : 'ios-menu'}
-            fontSize="40px"
+            icon="md-menu"
+            fontSize="35px"
             onClick={() => this.toggleMenu()}
             color="white"
           />

@@ -7,20 +7,40 @@
   margin-top: 3rem;
 }
 
-#home #home-text {
+#home-text {
+  z-index: 0 !important;
+  position: relative;
+
   font-size: 5em;
   line-height: 2em;
   text-align: center;
 }
 
-#home .important-techno {
+.important-techno {
   font-weight: 800;
   background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#home #country {
+#country {
   font-style: italic;
   font-weight: lighter;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  #home-text {
+    font-size: 2em;
+    line-height: 2em;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
+  #home-text {
+    font-size: 3.5em;
+    padding: 0 0.2em;
+    line-height: 2em;
+    text-align: center;
+  }
 }
