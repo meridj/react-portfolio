@@ -9,7 +9,7 @@
     rgb(30, 30, 30) 70%,
     rgb(47, 47, 47) 100%
   );
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;

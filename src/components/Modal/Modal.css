@@ -7,7 +7,7 @@
     rgb(30, 30, 30) 70%,
     rgb(47, 47, 47) 100%
   );
-  position: absolute;
+  position: fixed;
   top: 10rem;
   bottom: 10rem;
   right: 10rem;
@@ -39,20 +39,19 @@
 
 .closed {
   cursor: pointer;
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
+  margin-right: 1em;
+  align-self: flex-end;
 }
 
 #work-description {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 #work-description p {
-  padding: 5em 5em;
+  padding: 3em 5em;
   text-align: center;
   font-size: 1.5em;
   line-height: 1.9em;
@@ -86,4 +85,31 @@
     transform: translateZ(0);
     opacity: 1;
   }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  .Modal {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+      to right top,
+      rgb(10, 10, 10) 10%,
+      rgb(30, 30, 30) 70%,
+      rgb(47, 47, 47) 100%
+    );
+    position: fixed;
+    top: 3rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    border: none;
+    opacity: 1 !important;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
 }

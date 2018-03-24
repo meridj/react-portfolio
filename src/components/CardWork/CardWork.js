@@ -27,6 +27,7 @@ class CardWork extends Component {
   }
 
   handleCloseModal() {
+    console.log('ok');
     this.setState({
       modal: false
     });

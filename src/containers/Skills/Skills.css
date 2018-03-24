@@ -17,3 +17,30 @@
   margin-left: 3em;
   font-weight: 800;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  #skills {
+    height: 100%;
+  }
+  #skills section {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
+  #skills {
+    height: 100%;
+  }
+
+  #skills section {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

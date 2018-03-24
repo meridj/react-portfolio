@@ -29,14 +29,15 @@ const Modal = ({ handleCloseModal, modal, data }) => {
       isOpen={modal}
       aria={{ labelledby: 'title-modal' }}>
       <Title title={data.title} />
-      <Ionicon
-        className="closed"
-        onClick={handleCloseModal}
-        icon="md-close"
-        fontSize="40"
-        color="white"
-      />
+
       <section id="work-description">
+        <Ionicon
+          className="closed"
+          onClick={() => handleCloseModal()}
+          icon="md-close"
+          fontSize="40"
+          color="white"
+        />
         <Fade>
           <p>{data.text + data.text}</p>
         </Fade>

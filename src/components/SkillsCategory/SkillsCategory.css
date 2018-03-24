@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
   align-items: center;
   justify-content: center;
   -webkit-margin-after: 0em;
@@ -23,6 +22,7 @@
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
   margin-top: 1.2em;
+  padding: 0 10em;
 }
 
 .techno-name {
@@ -34,4 +34,16 @@
   padding-right: 0.3em;
   font-size: 1.2em;
   list-style: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  .techno-name-container {
+    padding: 1em 2em;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
+  .techno-name-container {
+    padding: 1em 2em;
+  }
 }
