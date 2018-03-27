@@ -4,6 +4,7 @@ import Zoom from 'react-reveal/Zoom';
 
 // Components
 import Modal from '../Modal';
+import { Desktop, TabletAndMobile } from '../../components/Responsive';
 
 // Styles
 import './CardWork.css';
@@ -44,19 +45,32 @@ class CardWork extends Component {
     return (
       <div>
         <Zoom>
-          <div
-            onClick={event => this.handleOpenModal(event)}
-            className="card-container">
-            <h4 id="title-work">{data.title}</h4>
-            <h5 id="subtitle-work">{data.techno}</h5>
-            <p id="text-work">{data.littleText}</p>
-          </div>
+          <Desktop>
+            <div
+              onClick={event => this.handleOpenModal(event)}
+              className="card-container">
+              <h4 id="title-work">{data.title}</h4>
+              <h5 id="subtitle-work">{data.techno}</h5>
+              <p id="text-work">{data.littleText}</p>
+            </div>
+          </Desktop>
+          <TabletAndMobile>
+            <a style={{ color: 'white' }} target="_blank" href={data.link}>
+              <div className="card-container">
+                <h4 id="title-work">{data.title}</h4>
+                <h5 id="subtitle-work">{data.techno}</h5>
+                <p id="text-work">{data.littleText}</p>
+              </div>
+            </a>
+          </TabletAndMobile>
         </Zoom>
-        <Modal
-          data={data}
-          modal={this.state.modal}
-          handleCloseModal={this.handleCloseModal}
-        />
+        <Desktop>
+          <Modal
+            data={data}
+            modal={this.state.modal}
+            handleCloseModal={this.handleCloseModal}
+          />
+        </Desktop>
       </div>
     );
   }

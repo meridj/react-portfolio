@@ -24,6 +24,7 @@
 .Overlay {
   cursor: pointer;
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   right: 0;
@@ -85,31 +86,4 @@
     transform: translateZ(0);
     opacity: 1;
   }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
-  .Modal {
-    display: flex;
-    align-items: center;
-    background-image: linear-gradient(
-      to right top,
-      rgb(10, 10, 10) 10%,
-      rgb(30, 30, 30) 70%,
-      rgb(47, 47, 47) 100%
-    );
-    position: fixed;
-    top: 3rem;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 3;
-    border: none;
-    opacity: 1 !important;
-  }
-}
-
-@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
-}
-
-@media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
 }
