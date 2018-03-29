@@ -1,7 +1,7 @@
-input[type='text'],
-input[type='email'] {
+input[type="text"],
+input[type="email"] {
   font-size: 1.1em;
-  width: 90%;
+  width: 100%;
   outline: none;
   background-color: #1e1e1e;
   color: white;
@@ -12,7 +12,7 @@ input[type='email'] {
 
 .textarea {
   font-size: 1.1em;
-  width: 90%;
+  width: 100%;
   resize: none;
   color: white;
   background-color: #1e1e1e;
@@ -20,4 +20,30 @@ input[type='email'] {
   border: none;
   outline: none;
   padding: 1.5em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  input[type="text"],
+  input[type="email"] {
+    font-size: 0.8em;
+    padding: 1em;
+  }
+
+  .textarea {
+    font-size: 0.8em;
+    padding: 1em;
+  }
+}
+
+@media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
+  input[type="text"],
+  input[type="email"] {
+    font-size: 0.8em;
+    padding: 1em;
+  }
+
+  .textarea {
+    font-size: 0.8em;
+    padding: 1em;
+  }
 }
