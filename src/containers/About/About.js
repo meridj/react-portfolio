@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 // Components
 import Title from '../../components/Title';
 import Header from '../../components/Header';
+import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
 
 // Styles
 import './About.css';
@@ -18,6 +19,7 @@ import './About.css';
  */
 const About = () => (
   <div id="about">
+    <ScrollToTopOnMount />
     <Header text="Let's talk about me" comeFrom="about" />
     <Title title="About me" />
     <section id="presentation-text">

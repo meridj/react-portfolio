@@ -15,14 +15,14 @@ import './SkillsCategory.css';
  *
  */
 const SkillsCategory = ({ technoName, title }) => (
-  <div className={'theme-techno-container'}>
+  <div className="theme-techno-container">
     <Fade bottom cascade>
-      <h4 className={'theme-techno-name'}>{title}</h4>
+      <h4 className="theme-techno-name">{title}</h4>
     </Fade>
-    <ul className={'techno-name-container'}>
+    <ul className="techno-name-container">
       {technoName.map((t, key) => (
         <Fade key={key} bottom cascade duration={1000}>
-          <li className={'techno-name'}>{t}</li>
+          <li className="techno-name">{t}</li>
         </Fade>
       ))}
     </ul>

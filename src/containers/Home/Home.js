@@ -4,6 +4,7 @@ import TextLoop from 'react-text-loop';
 
 // Components
 import Header from '../../components/Header';
+import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
 
 // Styles
 import './Home.css';
@@ -17,6 +18,7 @@ import './Home.css';
  */
 const Home = () => (
   <main id="home">
+    <ScrollToTopOnMount />;
     <Header text="Mehdi Meridja aka : meridj" comeFrom="home" />
     <Fade duration={6000} delay={200}>
       <h1 id="home-text">

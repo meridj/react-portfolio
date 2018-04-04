@@ -27,11 +27,12 @@ class Loading extends Component {
 
   increase() {
     const percent = this.state.percent + 0.19;
-    if (percent > 100) {
+    if (percent >= 100) {
       return;
     }
-    this.setState({ percent });
-    setTimeout(this.increase, 0.1);
+    this.setState({ percent }, () => {
+      setTimeout(this.increase, 0.1);
+    });
   }
 
   render() {

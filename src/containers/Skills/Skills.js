@@ -9,6 +9,7 @@ import MojoOnWebDev from '../../components/MojoOnWebDev';
 import Header from '../../components/Header';
 import SkillsCategory from '../../components/SkillsCategory';
 import Title from '../../components/Title';
+import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
 
 // Styles
 import './Skills.css';
@@ -22,6 +23,7 @@ import './Skills.css';
  */
 const Skills = () => (
   <div id="skills">
+    <ScrollToTopOnMount />
     <Header text="Let's talk about my skills" comeFrom="skills" />
     <Title title="Skills & cie" />
     <section className="margin-top-container">

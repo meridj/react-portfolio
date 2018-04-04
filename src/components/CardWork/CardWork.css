@@ -37,6 +37,19 @@
   border-bottom: 1px solid white;
 }
 
+#link-to-work {
+  color: white;
+  text-decoration: none;
+}
+
+#link-to-work:active {
+  text-decoration: none;
+}
+
+#link-to-work:focus {
+  text-decoration: none;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   #text-work {
     padding: 1em;

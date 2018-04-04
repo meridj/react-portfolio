@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import Fade from "react-reveal/Fade";
+import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 // Components
-import Title from "../../components/Title";
-import Form from "../Form";
-import Header from "../../components/Header";
+import Title from '../../components/Title';
+import Form from '../Form';
+import Header from '../../components/Header';
+import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
 
 // Styles
-import "./Contact.css";
+import './Contact.css';
 
 /**
  *
@@ -36,6 +37,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
+        <ScrollToTopOnMount />;
         <Header text="It will be so cool !" comeFrom="contact" />
         <Title title="Contact me" />
         <div id="social-network">

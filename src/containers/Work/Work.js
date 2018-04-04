@@ -7,6 +7,7 @@ import { works } from '../../config/data';
 import Title from '../../components/Title';
 import Header from '../../components/Header';
 import CardWork from '../../components/CardWork';
+import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
 
 // Styles
 import './Work.css';
@@ -20,6 +21,7 @@ import './Work.css';
  */
 const Work = () => (
   <div id="works">
+    <ScrollToTopOnMount />;
     <Header text="Let's take a look" comeFrom="works" />
     <Title title="My work" />
     <section>
