@@ -18,7 +18,7 @@ import './Home.css';
  */
 const Home = () => (
   <main id="home">
-    <ScrollToTopOnMount />;
+    <ScrollToTopOnMount />
     <Header text="Mehdi Meridja aka : meridj" comeFrom="home" />
     <Fade duration={6000} delay={200}>
       <h1 id="home-text">

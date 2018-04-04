@@ -79,7 +79,11 @@ class Form extends Component {
   render() {
     return (
       <Fade>
-        <form onSubmit={event => this.handleSubmit(event)} className="form">
+        <form
+          autComplete="off"
+          onSubmit={event => this.handleSubmit(event)}
+          className="form"
+        >
           <Input
             name="firstname"
             type="text"

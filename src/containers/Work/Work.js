@@ -21,7 +21,7 @@ import './Work.css';
  */
 const Work = () => (
   <div id="works">
-    <ScrollToTopOnMount />;
+    <ScrollToTopOnMount />
     <Header text="Let's take a look" comeFrom="works" />
     <Title title="My work" />
     <section>
