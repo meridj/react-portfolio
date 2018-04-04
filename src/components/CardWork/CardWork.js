@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 
 // Components
 import Modal from '../Modal';
@@ -43,7 +43,7 @@ class CardWork extends Component {
     const { data } = this.props;
     return (
       <div>
-        <Zoom>
+        <Flip top>
           <Desktop>
             <div
               onClick={event => this.handleOpenModal(event)}
@@ -63,7 +63,7 @@ class CardWork extends Component {
               </div>
             </a>
           </TabletAndMobile>
-        </Zoom>
+        </Flip>
         <Desktop>
           <Modal
             data={data}
