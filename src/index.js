@@ -12,6 +12,7 @@ import Loading from './containers/Loading';
 
 // Components
 import SnowStorm from 'react-snowstorm';
+import MouseFollower from './components/MouseFollower';
 
 // Styles
 import './styles/normalize.css';
@@ -25,9 +26,11 @@ import './styles/index.css';
  *
  */
 class App extends Component {
-  state = {
-    loading: true
-  };
+  constructor(props) {
+    super(props);
+    this.state = { pageY: 0, pageX: 0, loading: true };
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+  }
 
   componentDidMount() {
     setTimeout(() => {
@@ -37,10 +40,15 @@ class App extends Component {
     }, 4500);
   }
 
+  handleMouseMove(event) {
+    this.setState({ pageX: event.pageX, pageY: event.pageY });
+  }
+
   render() {
     return (
-      <div>
+      <div onMouseMove={event => this.handleMouseMove(event)}>
         <SnowStorm usePositionFixed />
+        <MouseFollower pageX={this.state.pageX} pageY={this.state.pageY} />
         {this.state.loading ? (
           <Loading />
         ) : (
