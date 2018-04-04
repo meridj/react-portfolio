@@ -37,7 +37,7 @@ class Contact extends Component {
   render() {
     return (
       <div id="contact">
-        <ScrollToTopOnMount />;
+        <ScrollToTopOnMount />
         <Header text="It will be so cool !" comeFrom="contact" />
         <Title title="Contact me" />
         <div id="social-network">

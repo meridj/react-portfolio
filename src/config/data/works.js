@@ -1,10 +1,6 @@
-// Assets
-import test1 from '../../assets/test1.jpg';
-
 const works = [
   {
     title: 'Stromboli',
-    img: test1,
     github: false,
     link: 'http://www.google.fr/',
     littleText: `Lorem ipsum dolor sit amet,
@@ -26,7 +22,6 @@ const works = [
   },
   {
     title: 'Stromboli',
-    img: test1,
     link: 'http://www.google.fr/',
     github: true,
     linkGithub: 'https://github.com/meridj/emaily',
@@ -49,7 +44,6 @@ const works = [
   },
   {
     title: 'Stromboli',
-    img: test1,
     github: false,
     link: 'http://www.google.fr/',
     littleText: `Lorem ipsum dolor sit amet,
@@ -71,7 +65,6 @@ const works = [
   },
   {
     title: 'Stromboli',
-    img: test1,
     link: 'http://www.google.fr/',
     github: true,
     linkGithub: 'https://github.com/meridj/emaily',
@@ -94,7 +87,6 @@ const works = [
   },
   {
     title: 'Stromboli',
-    img: test1,
     link: 'http://www.google.fr/',
     github: false,
     littleText: `Lorem ipsum dolor sit amet,
@@ -116,7 +108,6 @@ const works = [
   },
   {
     title: 'Stromboli',
-    img: test1,
     link: 'http://www.google.fr/',
     github: true,
     linkGithub: 'https://github.com/meridj/emaily',
