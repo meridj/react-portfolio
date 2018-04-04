@@ -80,7 +80,7 @@ class Form extends Component {
     return (
       <Fade>
         <form
-          autComplete="off"
+          autoComplete="off"
           onSubmit={event => this.handleSubmit(event)}
           className="form"
         >
