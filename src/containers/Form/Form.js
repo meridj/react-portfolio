@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as firebase from 'firebase';
 
 // Components
 import Fade from 'react-reveal/Fade';
@@ -7,9 +6,6 @@ import Input from '../../components/Input';
 
 // Styles
 import './Form.css';
-
-// Firebase
-import firebaseCredentials from '../../config/firebase';
 
 /**
  *
@@ -31,8 +27,6 @@ class Form extends Component {
       disabled: true,
       validateSubmit: false
     };
-
-    firebase.initializeApp(firebaseCredentials);
 
     this.checkMail = this.checkMail.bind(this);
     this.checkValue = this.checkValue.bind(this);
@@ -63,15 +57,6 @@ class Form extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.handleValidateForm();
-
-    const emails = firebase.database().ref('mails');
-    emails.push({
-      firstname: this.state.firstname,
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
-    });
-
     this.setState({
       firstname: '',
       name: '',
