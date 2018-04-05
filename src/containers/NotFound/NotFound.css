@@ -1,0 +1,20 @@
+#not-found {
+  height: calc(100vh - 3rem);
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#not-found h3 {
+  font-size: 3rem;
+  padding: 0 1em;
+  text-align: center;
+  line-height: 2em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+  #not-found h3 {
+    font-size: 2rem;
+  }
+}

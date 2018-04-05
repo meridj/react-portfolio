@@ -8,11 +8,13 @@ import About from './containers/About';
 import Skills from './containers/Skills';
 import Work from './containers/Work';
 import Contact from './containers/Contact';
+import NotFound from './containers/NotFound';
 import Loading from './containers/Loading';
 
 // Components
 import SnowStorm from 'react-snowstorm';
 import MouseFollower from './components/MouseFollower';
+import { Desktop } from './components/Responsive';
 
 // Styles
 import './styles/normalize.css';
@@ -28,7 +30,7 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { pageY: 0, pageX: 0, loading: true };
+    this.state = { mousePosition: [], loading: true };
     this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
@@ -41,14 +43,17 @@ class App extends Component {
   }
 
   handleMouseMove(event) {
-    this.setState({ pageX: event.pageX, pageY: event.pageY });
+    const newMousePosition = [event.pageX, event.pageY];
+    this.setState({ mousePosition: newMousePosition });
   }
 
   render() {
     return (
       <div onMouseMove={event => this.handleMouseMove(event)}>
         <SnowStorm usePositionFixed />
-        <MouseFollower pageX={this.state.pageX} pageY={this.state.pageY} />
+        <Desktop>
+          <MouseFollower mousePosition={this.state.mousePosition} />
+        </Desktop>
         {this.state.loading ? (
           <Loading />
         ) : (
@@ -59,6 +64,7 @@ class App extends Component {
               <Route exact path="/skills" component={Skills} />
               <Route exact path="/works" component={Work} />
               <Route exact path="/contact" component={Contact} />
+              <Route component={NotFound} />
             </Switch>
           </BrowserRouter>
         )}

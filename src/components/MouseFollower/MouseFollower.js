@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
-
-// Components
-import Bounce from 'react-reveal/Bounce';
+import PropTypes from 'prop-types';
 
 // Styles
 import './MouseFollower.css';
 
-/**
+/*
  *
  * State Full Component: MouseFollower
- * Usage :
- * @param props => none
- *
+ * Usage : render a div that follow mouse pointer
+ * @param props => { mousePosition }
+ * 
  */
 class MouseFollower extends Component {
   render() {
+    const mousePosition = [...this.props.mousePosition];
+    const sizeOfMouseFollower = 20;
+
     return (
-      <Bounce>
-        <div
-          style={{
-            top: `${this.props.pageY - 20 / 2}px`,
-            left: `${this.props.pageX - 20 / 2}px`
-          }}
-          id="mouse-follower"
-        />
-      </Bounce>
+      <div
+        style={{
+          top: `${mousePosition[1] - sizeOfMouseFollower / 2}px`,
+          left: `${mousePosition[0] - sizeOfMouseFollower / 2}px`
+        }}
+        id="mouse-follower"
+      />
     );
   }
 }
+
+MouseFollower.propTypes = {
+  mousePosition: PropTypes.array.isRequired
+};
 
 export default MouseFollower;

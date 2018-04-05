@@ -1,3 +1,12 @@
+html {
+  background-image: linear-gradient(
+    to right top,
+    #0a0a0a 10%,
+    #1e1e1e 70%,
+    #2f2f2f 100%
+  );
+}
+
 body {
   color: white;
   font-family: 'Muli';
