@@ -61,13 +61,11 @@ class Contact extends Component {
           </Fade>
         </div>
         <Form handleValidateForm={this.handleValidateForm} />
-        {this.state.formValidate ? (
-          <Fade bottom cascade duration={1000}>
-            <p className="answer-text">
-              Great ! I will answer as soon as possible !
-            </p>
-          </Fade>
-        ) : null}
+        <Fade bottom cascade duration={1000} when={this.state.formValidate}>
+          <p className="answer-text">
+            Great ! I will answer as soon as possible !
+          </p>
+        </Fade>
       </div>
     );
   }
