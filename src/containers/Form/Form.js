@@ -79,9 +79,9 @@ class Form extends Component {
           name: '',
           email: '',
           message: '',
-          disabled: true
+          disabled: true,
+          isSendingForm: false
         });
-        this.setState({ isSendingForm: false });
       })
       .catch(error => console.error(error));
   }
