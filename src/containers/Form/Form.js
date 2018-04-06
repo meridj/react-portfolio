@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { BarLoader } from 'react-spinners';
+import { Fade } from 'react-reveal';
 
 // Components
-import Fade from 'react-reveal/Fade';
 import Input from '../../components/Input';
 
 // Styles
@@ -25,14 +26,15 @@ class Form extends Component {
       email: '',
       message: '',
       disabled: true,
+      isSendingForm: false,
       validateSubmit: false
     };
 
     this.checkMail = this.checkMail.bind(this);
     this.checkValue = this.checkValue.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.encode = this.encode.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.encode = this.encode.bind(this);
   }
 
   checkMail() {
@@ -70,14 +72,18 @@ class Form extends Component {
       body: this.encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => {
-        this.props.handleValidateForm();
-        this.setState({
-          firstname: '',
-          name: '',
-          email: '',
-          message: '',
-          disabled: true
-        });
+        this.setState({ isSendingForm: true });
+        setTimeout(() => {
+          this.setState({ isSendingForm: false });
+          this.props.handleValidateForm();
+          this.setState({
+            firstname: '',
+            name: '',
+            email: '',
+            message: '',
+            disabled: true
+          });
+        }, 1000);
       })
       .catch(error => console.error(error));
   }
@@ -137,6 +143,16 @@ class Form extends Component {
             />
           </Fade>
         </form>
+        <div
+          className="bar-loader"
+          style={{ display: this.state.isSendingForm ? 'flex' : 'none' }}
+        >
+          <BarLoader
+            height={8}
+            color={'#7f00ff'}
+            loading={this.state.isSendingForm}
+          />
+        </div>
       </Fade>
     );
   }
