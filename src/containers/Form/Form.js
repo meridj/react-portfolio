@@ -65,6 +65,7 @@ class Form extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({ isSendingForm: true });
 
     fetch('/', {
       method: 'POST',
@@ -72,18 +73,15 @@ class Form extends Component {
       body: this.encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => {
-        this.setState({ isSendingForm: true });
-        setTimeout(() => {
-          this.setState({ isSendingForm: false });
-          this.props.handleValidateForm();
-          this.setState({
-            firstname: '',
-            name: '',
-            email: '',
-            message: '',
-            disabled: true
-          });
-        }, 1000);
+        this.props.handleValidateForm();
+        this.setState({
+          firstname: '',
+          name: '',
+          email: '',
+          message: '',
+          disabled: true
+        });
+        this.setState({ isSendingForm: false });
       })
       .catch(error => console.error(error));
   }
