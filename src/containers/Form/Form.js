@@ -16,6 +16,13 @@ import './Form.css';
  * @param props => none
  *
  */
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -57,6 +64,15 @@ class Form extends Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.handleValidateForm();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state })
+    })
+      .then(() => alert('Success!'))
+      .catch(error => alert(error));
+
     this.setState({
       firstname: '',
       name: '',
