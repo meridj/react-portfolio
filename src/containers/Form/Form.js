@@ -16,13 +16,6 @@ import './Form.css';
  * @param props => none
  *
  */
-
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -38,6 +31,7 @@ class Form extends Component {
     this.checkMail = this.checkMail.bind(this);
     this.checkValue = this.checkValue.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.encode = this.encode.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -61,25 +55,31 @@ class Form extends Component {
     return false;
   }
 
+  encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  }
+
   handleSubmit(event) {
     event.preventDefault();
-    this.props.handleValidateForm();
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state })
+      body: this.encode({ 'form-name': 'contact', ...this.state })
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
-
-    this.setState({
-      firstname: '',
-      name: '',
-      email: '',
-      message: '',
-      disabled: true
-    });
+      .then(() => {
+        this.props.handleValidateForm();
+        this.setState({
+          firstname: '',
+          name: '',
+          email: '',
+          message: '',
+          disabled: true
+        });
+      })
+      .catch(error => console.error(error));
   }
 
   handleChange(event, field) {
