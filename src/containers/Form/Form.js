@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Fade } from 'react-reveal';
 
 // Components
 import Input from '../../components/Input';
@@ -15,7 +14,7 @@ import { inputs } from '../../config/data';
  *
  * State Full Component: Form
  * Usage : render a form that take email,
- * name, and message from user, to me.
+ * firstname, name and message from user, to me.
  *
  * @param props => none
  *
@@ -36,7 +35,7 @@ class Form extends Component {
     };
 
     this.checkMail = this.checkMail.bind(this);
-    this.checkValue = this.checkValue.bind(this);
+    this.checkFormValues = this.checkFormValues.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.encode = this.encode.bind(this);
@@ -50,7 +49,7 @@ class Form extends Component {
     return reg.test(this.state.formValues.email);
   }
 
-  checkValue() {
+  checkFormValues() {
     if (
       this.checkMail() &&
       this.state.formValues.firstname.trim().length &&
@@ -91,12 +90,13 @@ class Form extends Component {
       })
       .catch(error => console.error(error));
   }
+
   handleChange(event, field) {
     let newFormValues = { ...this.state.formValues };
     newFormValues[field] = event.target.value;
 
     this.setState({ formValues: newFormValues }, () => {
-      if (this.checkValue()) {
+      if (this.checkFormValues()) {
         this.setState({ disabled: false });
       } else {
         this.setState({ disabled: true });

@@ -55,10 +55,8 @@ class Loading extends Component {
           <Fade bottom duration={3000} delay={700}>
             <h2 id="build">
               build from scratch with
-              <span className="build-techno"> react</span> and
-              <span className="build-techno" id="love">
-                {''}love
-              </span>.
+              <span className="build-techno">React</span> &
+              <span className="build-techno">Love</span>
             </h2>
           </Fade>
         </div>

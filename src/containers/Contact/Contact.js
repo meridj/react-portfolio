@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Fade from 'react-reveal/Fade';
 
 // Components
 import Title from '../../components/Title';
@@ -24,7 +23,7 @@ class Contact extends Component {
         <ScrollToTopOnMount />
         <Header text="It will be so cool !" comeFrom="contact" />
         <Title title="Contact me" />
-        <Form handleValidateForm={this.handleValidateForm} />
+        <Form />
       </div>
     );
   }

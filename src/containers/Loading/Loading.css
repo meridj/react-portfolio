@@ -34,15 +34,10 @@
 }
 
 .build-techno {
-  font-weight: 800;
   background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 20px #7f00ff;
-}
-
-#love {
-  font-weight: inherit;
   font-style: italic;
   padding: 0 0.5em;
 }
