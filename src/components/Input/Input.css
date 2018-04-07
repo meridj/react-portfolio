@@ -1,5 +1,15 @@
-input[type="text"],
-input[type="email"] {
+input:focus {
+  box-shadow: 0px 0px 12px 1px #7f00ff;
+  margin: 0.5em 0;
+}
+
+textarea:focus {
+  box-shadow: 0px 0px 12px 1px #7f00ff;
+  margin: 0.5em 0;
+}
+
+input[type='text'],
+input[type='email'] {
   font-size: 1.1em;
   width: 100%;
   outline: none;
@@ -8,6 +18,7 @@ input[type="email"] {
   border-radius: 0px;
   border: none;
   padding: 1.5em;
+  transition: 0.5s;
 }
 
 .textarea {
@@ -20,11 +31,12 @@ input[type="email"] {
   border: none;
   outline: none;
   padding: 1.5em;
+  transition: 0.5s;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
-  input[type="text"],
-  input[type="email"] {
+  input[type='text'],
+  input[type='email'] {
     font-size: 0.8em;
     padding: 1em;
   }
@@ -36,8 +48,8 @@ input[type="email"] {
 }
 
 @media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
-  input[type="text"],
-  input[type="email"] {
+  input[type='text'],
+  input[type='email'] {
     font-size: 0.8em;
     padding: 1em;
   }

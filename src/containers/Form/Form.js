@@ -8,6 +8,9 @@ import SendingFormLoader from '../../components/SendingFormLoader';
 // Styles
 import './Form.css';
 
+// Datas
+import { inputs } from '../../config/data';
+
 /**
  *
  * State Full Component: Form
@@ -108,34 +111,18 @@ class Form extends Component {
         onSubmit={event => this.handleSubmit(event)}
         className="form"
       >
-        <Input
-          name="firstname"
-          type="text"
-          value={this.state.formValues.firstname}
-          onChange={this.handleChange}
-          placeholder="Firstname"
-        />
-        <Input
-          name="name"
-          type="text"
-          value={this.state.formValues.name}
-          onChange={this.handleChange}
-          placeholder="Name"
-        />
-        <Input
-          name="email"
-          type="email"
-          value={this.state.formValues.email}
-          onChange={this.handleChange}
-          placeholder="Email"
-        />
-        <Input
-          name="message"
-          textarea
-          value={this.state.formValues.message}
-          onChange={this.handleChange}
-          placeholder="Mehdi, i need you ... !"
-        />
+        {inputs.map((input, key) => (
+          <Input
+            appearFrom={input.appearFrom}
+            key={key}
+            name={input.inputName}
+            type={input.inputType}
+            placeholder={input.inputPlaceholder}
+            textarea={input.textarea}
+            value={this.state.formValues[input.inputName]}
+            onChange={this.handleChange}
+          />
+        ))}
         <button disabled={this.state.disabled} className="submit">
           {this.state.disabled ? 'Complete the form' : 'Send'}
         </button>
