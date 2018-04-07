@@ -21,10 +21,12 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstname: '',
-      name: '',
-      email: '',
-      message: '',
+      formValues: {
+        firstname: '',
+        name: '',
+        email: '',
+        message: ''
+      },
       disabled: true,
       isSendingForm: false,
       validateSubmit: false
@@ -42,15 +44,15 @@ class Form extends Component {
       '^[a-z0-9]+([_|.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|.|-]{1}[a-z0-9]+)*[.]{1}[a-z]{2,6}$',
       'i'
     );
-    return reg.test(this.state.email);
+    return reg.test(this.state.formValues.email);
   }
 
   checkValue() {
     if (
       this.checkMail() &&
-      this.state.firstname.trim().length &&
-      this.state.name.trim().length &&
-      this.state.message.trim().length
+      this.state.formValues.firstname.trim().length &&
+      this.state.formValues.name.trim().length &&
+      this.state.formValues.message.trim().length
     ) {
       return true;
     }
@@ -70,23 +72,27 @@ class Form extends Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: this.encode({ 'form-name': 'contact', ...this.state })
+      body: this.encode({ 'form-name': 'contact', ...this.state.formValues })
     })
       .then(() => {
         this.setState({
-          firstname: '',
-          name: '',
-          email: '',
-          message: '',
+          formValues: {
+            firstname: '',
+            name: '',
+            email: '',
+            message: ''
+          },
           disabled: true,
           isSendingForm: false
         });
       })
       .catch(error => console.error(error));
   }
-
   handleChange(event, field) {
-    this.setState({ [field]: event.target.value }, () => {
+    let newFormValues = { ...this.state.formValues };
+    newFormValues[field] = event.target.value;
+
+    this.setState({ formValues: newFormValues }, () => {
       if (this.checkValue()) {
         this.setState({ disabled: false });
       } else {
@@ -105,36 +111,34 @@ class Form extends Component {
         <Input
           name="firstname"
           type="text"
-          value={this.state.firstname}
+          value={this.state.formValues.firstname}
           onChange={this.handleChange}
           placeholder="Firstname"
         />
         <Input
           name="name"
           type="text"
-          value={this.state.name}
+          value={this.state.formValues.name}
           onChange={this.handleChange}
           placeholder="Name"
         />
         <Input
           name="email"
           type="email"
-          value={this.state.email}
+          value={this.state.formValues.email}
           onChange={this.handleChange}
           placeholder="Email"
         />
         <Input
           name="message"
           textarea
-          value={this.state.message}
+          value={this.state.formValues.message}
           onChange={this.handleChange}
           placeholder="Mehdi, i need you ... !"
         />
-        <Fade bottom cascade>
-          <button disabled={this.state.disabled} className="submit">
-            {this.state.disabled ? 'Complete the form' : 'Send'}
-          </button>
-        </Fade>
+        <button disabled={this.state.disabled} className="submit">
+          {this.state.disabled ? 'Complete the form' : 'Send'}
+        </button>
         <SendingFormLoader isSendingForm={this.state.isSendingForm} />
       </form>
     );
