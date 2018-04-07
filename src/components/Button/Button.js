@@ -39,7 +39,8 @@ class Button extends Component {
           <button
             onMouseEnter={github ? () => this.handleHover(true) : null}
             onMouseLeave={github ? () => this.handleHover(false) : null}
-            className="button">
+            className="button"
+          >
             {github ? 'View on Github' : 'View website'}
             {github ? (
               <Ionicon

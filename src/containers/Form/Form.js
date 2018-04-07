@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { BarLoader } from 'react-spinners';
 import { Fade } from 'react-reveal';
 
 // Components
 import Input from '../../components/Input';
+import SendingFormLoader from '../../components/SendingFormLoader';
 
 // Styles
 import './Form.css';
@@ -73,7 +73,6 @@ class Form extends Component {
       body: this.encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => {
-        this.props.handleValidateForm();
         this.setState({
           firstname: '',
           name: '',
@@ -98,60 +97,46 @@ class Form extends Component {
 
   render() {
     return (
-      <Fade>
-        <form
-          method="POST"
-          onSubmit={event => this.handleSubmit(event)}
-          className="form"
-        >
-          <Input
-            name="firstname"
-            type="text"
-            value={this.state.firstname}
-            onChange={this.handleChange}
-            placeholder="Firstname"
-          />
-          <Input
-            name="name"
-            type="text"
-            value={this.state.name}
-            onChange={this.handleChange}
-            placeholder="Name"
-          />
-          <Input
-            name="email"
-            type="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            placeholder="Email"
-          />
-          <Input
-            name="message"
-            textarea
-            value={this.state.message}
-            onChange={this.handleChange}
-            placeholder="Mehdi, i need you ... !"
-          />
-          <Fade>
-            <input
-              disabled={this.state.disabled}
-              className="submit"
-              type="submit"
-              value={this.state.disabled ? 'Complete the form' : 'Send'}
-            />
-          </Fade>
-        </form>
-        <div
-          className="bar-loader"
-          style={{ display: this.state.isSendingForm ? 'flex' : 'none' }}
-        >
-          <BarLoader
-            height={8}
-            color={'#7f00ff'}
-            loading={this.state.isSendingForm}
-          />
-        </div>
-      </Fade>
+      <form
+        method="POST"
+        onSubmit={event => this.handleSubmit(event)}
+        className="form"
+      >
+        <Input
+          name="firstname"
+          type="text"
+          value={this.state.firstname}
+          onChange={this.handleChange}
+          placeholder="Firstname"
+        />
+        <Input
+          name="name"
+          type="text"
+          value={this.state.name}
+          onChange={this.handleChange}
+          placeholder="Name"
+        />
+        <Input
+          name="email"
+          type="email"
+          value={this.state.email}
+          onChange={this.handleChange}
+          placeholder="Email"
+        />
+        <Input
+          name="message"
+          textarea
+          value={this.state.message}
+          onChange={this.handleChange}
+          placeholder="Mehdi, i need you ... !"
+        />
+        <Fade bottom cascade>
+          <button disabled={this.state.disabled} className="submit">
+            {this.state.disabled ? 'Complete the form' : 'Send'}
+          </button>
+        </Fade>
+        <SendingFormLoader isSendingForm={this.state.isSendingForm} />
+      </form>
     );
   }
 }

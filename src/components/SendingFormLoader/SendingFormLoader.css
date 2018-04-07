@@ -1,0 +1,8 @@
+.bar-loader {
+  position: absolute;
+  right: calc(50% - 150px / 2);
+  width: 150px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}

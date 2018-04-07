@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Components
 import Fade from 'react-reveal/Fade';
 
 // Styles

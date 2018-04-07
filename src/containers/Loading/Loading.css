@@ -42,13 +42,9 @@
 }
 
 #love {
-  box-shadow: 2px 2px 20px #7f00ff;
-  text-shadow: 2px 2px 20px white;
-  font-weight: 800;
-  margin: 0.2em;
+  font-weight: inherit;
   font-style: italic;
-  padding: 0.2em 0.5em;
-  background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
+  padding: 0 0.5em;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {

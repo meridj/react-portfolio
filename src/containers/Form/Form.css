@@ -1,20 +1,3 @@
-.bar-loader {
-  position: absolute;
-  right: calc(50% - 150px / 2);
-  width: 150px;
-  z-index: 2;
-  display: flex;
-  padding: 1.5em;
-  justify-content: center;
-  background-image: linear-gradient(
-    to right top,
-    #0a0a0a 10%,
-    #1e1e1e 70%,
-    #2f2f2f 100%
-  );
-  background-repeat: no-repeat;
-}
-
 .form {
   margin-top: 1em;
   align-self: center;
@@ -35,7 +18,6 @@
   font-weight: 800;
   font-variant: small-caps;
   cursor: pointer;
-  transition: 0.3s;
   outline: none;
 }
 
@@ -44,15 +26,14 @@
   color: white;
 }
 
+.submit:focus {
+  outline: none;
+}
+
 .submit:disabled {
   color: black;
   background: grey;
   cursor: inherit;
-}
-
-.submit:disabled:hover {
-  background: grey;
-  color: black;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {

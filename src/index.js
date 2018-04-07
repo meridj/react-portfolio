@@ -30,16 +30,15 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { mousePosition: [], loading: true };
+    this.state = { mousePosition: [], loading: false };
     this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.handleLoading = this.handleLoading.bind(this);
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        loading: false
-      });
-    }, 4500);
+  handleLoading() {
+    this.setState({
+      loading: false
+    });
   }
 
   handleMouseMove(event) {
@@ -55,7 +54,7 @@ class App extends Component {
           <MouseFollower mousePosition={this.state.mousePosition} />
         </Desktop>
         {this.state.loading ? (
-          <Loading />
+          <Loading handleLoading={this.handleLoading} />
         ) : (
           <BrowserRouter>
             <Switch location={this.props.location}>

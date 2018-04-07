@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Line } from 'rc-progress';
 import Fade from 'react-reveal/Fade';
 
@@ -26,12 +27,13 @@ class Loading extends Component {
   }
 
   increase() {
-    const percent = this.state.percent + 0.19;
+    const percent = this.state.percent + 0.25;
     if (percent >= 100) {
+      this.props.handleLoading();
       return;
     }
     this.setState({ percent }, () => {
-      setTimeout(this.increase, 0.1);
+      setTimeout(this.increase, 0.05);
     });
   }
 
@@ -53,9 +55,10 @@ class Loading extends Component {
           <Fade bottom duration={3000} delay={700}>
             <h2 id="build">
               build from scratch with
-              <span className="build-techno"> react</span>,
-              <span className="build-techno"> node</span> and
-              <span id="love">love .</span>
+              <span className="build-techno"> react</span> and
+              <span className="build-techno" id="love">
+                {''}love
+              </span>.
             </h2>
           </Fade>
         </div>
@@ -63,5 +66,9 @@ class Loading extends Component {
     );
   }
 }
+
+Loading.propTypes = {
+  handleLoading: PropTypes.func.isRequired
+};
 
 export default Loading;
