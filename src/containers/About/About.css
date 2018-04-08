@@ -22,30 +22,26 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   #about {
     height: 100%;
-    display: flex;
-  }
-
-  #presentation-photo {
-    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
   }
 }
 
 @media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
   #about {
-    display: flex;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
   }
-  #presentation-photo {
-    display: none;
+  #presentation-text {
+    height: 100vh;
   }
 }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
-  #presentation-photo {
-    display: none;
-  }
   #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
