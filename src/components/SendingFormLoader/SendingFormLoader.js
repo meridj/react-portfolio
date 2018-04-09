@@ -14,7 +14,7 @@ import './SendingFormLoader.css';
  */
 const SendingFormLoader = ({ isSendingForm }) => (
   <div
-    style={{ display: isSendingForm ? 'auto' : 'none' }}
+    style={{ display: isSendingForm ? 'flex' : 'none' }}
     className="bar-loader"
   >
     <BarLoader height={30} color={'#7f00ff'} loading={isSendingForm} />
