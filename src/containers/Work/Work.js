@@ -27,11 +27,9 @@ const Work = ({ history }) => (
     <Header text="Let's take a look" comeFrom="works" />
     <Title title="My work" />
     <section>
-      {works.map((work, key) => {
-        return <CardWork data={work} key={key} />;
-      })}
+      {works.map((work, key) => <CardWork data={work} key={key} />)}
     </section>
-    <Fade bottom>
+    <Fade top>
       <p onClick={() => history.push('/contact')} id="idea-to-reality">
         Now, let's turn your <span>idea</span> to <span>reality</span>!
       </p>

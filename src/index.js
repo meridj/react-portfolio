@@ -30,7 +30,7 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { mousePosition: [], loading: true };
+    this.state = { mousePosition: [0, 0], loading: false };
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleLoading = this.handleLoading.bind(this);
   }
