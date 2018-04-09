@@ -33,7 +33,7 @@ class Loading extends Component {
       return;
     }
     this.setState({ percent }, () => {
-      setTimeout(this.increase, 0.05);
+      setTimeout(this.increase, 0.1);
     });
   }
 
@@ -49,10 +49,10 @@ class Loading extends Component {
           trailColor="rgb(47, 47, 47)"
         />
         <div id="loading-text">
-          <Fade duration={3000} delay={700}>
+          <Fade>
             <h1 id="welcome">Welcome to my portfolio</h1>
           </Fade>
-          <Fade bottom duration={3000} delay={700}>
+          <Fade bottom>
             <h2 id="build">
               build from scratch with
               <span className="build-techno">React</span> &
