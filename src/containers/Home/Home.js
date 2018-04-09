@@ -5,6 +5,8 @@ import TextLoop from 'react-text-loop';
 // Components
 import Header from '../../components/Header';
 import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
+import DiscoverMyWorld from '../../components/DiscoverMyWorld';
+import { Desktop } from '../../components/Responsive';
 
 // Styles
 import './Home.css';
@@ -24,13 +26,17 @@ const Home = () => (
       <h1 id="home-text">
         Hi, i'm an enthousiast <br />
         <TextLoop>
-          <strong className="important-techno">React</strong>
+          <strong className="important-techno">JavaScript</strong>
+          <strong className="important-techno">ReactJs</strong>
+          <strong className="important-techno">NodeJs</strong>
           <strong className="important-techno">Redux</strong>
-          <strong className="important-techno">Node</strong>
         </TextLoop>{' '}
         developer<br />based in Lyon, <span id="country">Fr</span>.
       </h1>
     </Fade>
+    <Desktop>
+      <DiscoverMyWorld />
+    </Desktop>
   </main>
 );
 

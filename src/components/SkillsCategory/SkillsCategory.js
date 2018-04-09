@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
 // Components
-import Fade from 'react-reveal/Fade';
+import SkillName from '../SkillName';
 
 // Styles
 import './SkillsCategory.css';
@@ -14,16 +15,14 @@ import './SkillsCategory.css';
  * @param props => { title }
  *
  */
-const SkillsCategory = ({ technoName, title }) => (
+const SkillsCategory = ({ technoNames, title }) => (
   <div className="theme-techno-container">
     <Fade bottom cascade>
       <h4 className="theme-techno-name">{title}</h4>
     </Fade>
     <ul className="techno-name-container">
-      {technoName.map((t, key) => (
-        <Fade key={key} bottom cascade duration={1000}>
-          <li className="techno-name">{t}</li>
-        </Fade>
+      {technoNames.map((technoName, key) => (
+        <SkillName technoName={technoName} />
       ))}
     </ul>
   </div>

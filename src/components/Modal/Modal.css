@@ -40,7 +40,8 @@
 
 .closed {
   cursor: pointer;
-  margin-right: 1em;
+  margin-bottom: 5em;
+  margin-right: 2em;
   align-self: flex-end;
 }
 

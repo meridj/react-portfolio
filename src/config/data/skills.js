@@ -1,26 +1,44 @@
 const skills = [
   {
     title: 'Client Side',
-    technoName: [
+    technoNames: [
       'ReactJs',
       'Redux',
       'Flow',
-      'Vanilla',
+      'GatsbyJs',
+      'JavaScript Vanilla',
       'jQuery',
       'Html',
       'Css',
       'Grid Layout',
-      'jQuery',
+      'CSS-in-JS',
       'Sass'
     ]
   },
   {
     title: 'Server Side',
-    technoName: ['NodeJs', 'ExpressJs', 'GraphQL', 'Rest', 'MongoDB']
+    technoNames: [
+      'NodeJs',
+      'ExpressJs',
+      'Rest',
+      'MongoDB',
+      'Firebase',
+      'PHP',
+      'MySql'
+    ]
   },
   {
-    title: 'Tools',
-    technoName: ['Git', 'Trello', 'Slack', 'Gulp', 'Webpack']
+    title: 'Tools & Deployment',
+    technoNames: [
+      'Netlify',
+      'Heroku',
+      'Docker',
+      'Git',
+      'Trello',
+      'Slack',
+      'Brunch',
+      'Webpack'
+    ]
   }
 ];
 

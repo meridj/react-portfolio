@@ -23,7 +23,8 @@ import './Contact.css';
  */
 class Contact extends Component {
   render() {
-    return <div id="contact">
+    return (
+      <div id="contact">
         <ScrollToTopOnMount />
         <Header text="It will be so cool !" comeFrom="contact" />
         <Title title="Contact me" />
@@ -49,7 +50,8 @@ class Contact extends Component {
             </div>
           </LightSpeed>
         </section>
-      </div>;
+      </div>
+    );
   }
 }
 

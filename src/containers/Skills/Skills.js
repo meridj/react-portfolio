@@ -35,8 +35,8 @@ const Skills = () => (
       <h4 id={'work-with-text'}>I work on :</h4>
     </LightSpeed>
     <section>
-      {skills.map(({ title, technoName }, key) => (
-        <SkillsCategory key={key} title={title} technoName={technoName} />
+      {skills.map(({ title, technoNames }, key) => (
+        <SkillsCategory key={key} title={title} technoNames={technoNames} />
       ))}
     </section>
   </div>

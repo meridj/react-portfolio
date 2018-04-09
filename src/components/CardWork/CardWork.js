@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
 
 // Components
 import Modal from '../Modal';
@@ -43,7 +43,7 @@ class CardWork extends Component {
     const { data } = this.props;
     return (
       <div>
-        <Flip top>
+        <Fade duration={2000}>
           <Desktop>
             <div
               onClick={event => this.handleOpenModal(event)}
@@ -63,7 +63,7 @@ class CardWork extends Component {
               </div>
             </a>
           </TabletAndMobile>
-        </Flip>
+        </Fade>
         <Desktop>
           <Modal
             data={data}

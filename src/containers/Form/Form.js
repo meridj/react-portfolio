@@ -105,7 +105,7 @@ class Form extends Component {
   }
 
   render() {
-    return (
+    return [
       <form
         method="POST"
         onSubmit={event => this.handleSubmit(event)}
@@ -126,9 +126,9 @@ class Form extends Component {
         <button disabled={this.state.disabled} className="submit">
           {this.state.disabled ? 'Complete the form' : 'Send'}
         </button>
-        <SendingFormLoader isSendingForm={this.state.isSendingForm} />
-      </form>
-    );
+      </form>,
+      <SendingFormLoader isSendingForm={this.state.isSendingForm} />
+    ];
   }
 }
 

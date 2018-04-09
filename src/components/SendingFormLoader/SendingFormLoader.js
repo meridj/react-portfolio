@@ -13,8 +13,12 @@ import './SendingFormLoader.css';
  *
  */
 const SendingFormLoader = ({ isSendingForm }) => (
-  <div className="bar-loader">
-    <BarLoader height={15} color={'#7f00ff'} loading={isSendingForm} />
+  <div
+    style={{ display: isSendingForm ? 'auto' : 'none' }}
+    className="bar-loader"
+  >
+    <BarLoader height={30} color={'#7f00ff'} loading={isSendingForm} />
+    <span>Is sending</span>
   </div>
 );
 

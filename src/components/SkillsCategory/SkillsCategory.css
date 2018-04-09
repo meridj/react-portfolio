@@ -25,17 +25,6 @@
   padding: 0 10em;
 }
 
-.techno-name {
-  background: -webkit-linear-gradient(#7f00ff, #e100ff);
-  margin: 0.5em;
-  text-align: center;
-  border-radius: 1px;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-  font-size: 1.2em;
-  list-style: none;
-}
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
   .techno-name-container {
     padding: 1em 2em;
