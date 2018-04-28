@@ -11,13 +11,13 @@ const mojos = [
     title: 'Responsive',
     svg: <ResponsiveSvg />,
     text:
-      'My layouts are obviously responsive. It adapts to all types of screens'
+      'My layouts are obviously responsive. They adapt to all types of screens'
   },
   {
     title: 'Intuitive',
     svg: <IntuitiveSvg />,
     text:
-      'My web applications are intuitive and make the visitor live an unforgettable experience.'
+      'My web applications are intuitive and let the visitor live an unforgettable experience.'
   },
   {
     title: 'Dynamic',

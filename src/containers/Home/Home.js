@@ -24,7 +24,7 @@ const Home = () => (
     <Header text="Mehdi Meridja aka : meridj" comeFrom="home" />
     <Fade duration={6000} delay={200}>
       <h1 id="home-text">
-        Hi, i'm an enthousiast <br />
+        Hi, i'm an enthusiast <br />
         <TextLoop>
           <strong className="important-techno">JavaScript</strong>
           <strong className="important-techno">ReactJs</strong>

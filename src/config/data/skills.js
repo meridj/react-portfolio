@@ -6,7 +6,7 @@ const skills = [
       'Redux',
       'Flow',
       'GatsbyJs',
-      'JavaScript Vanilla',
+      'Vanilla JavaScript',
       'jQuery',
       'Html',
       'Css',

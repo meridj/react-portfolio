@@ -9,9 +9,9 @@ const works = [
     text: `
             It was with this portfolio that I started web development.
             I first developed it in simple Html and JavaScript vanilla. 
-            Then I removed it to redevelop with React. Today, I apply to 
-            it updates and best practices that I learn. I polish it 
-            like a diamond.
+            Then I decided to redevelop it with react. Today, I keep it
+            updated, and use only the best practices that I learning.
+            I polish it like a diamond.
           `
   },
   {
@@ -22,21 +22,21 @@ const works = [
     github: true,
     website: true,
     text: `
-            I love the markdown. I really wanted to know how it worked in the
-            background. That's why I had fun recreating an editor for my
-            personal needs.
+            I love markdown and I was interested to know what was going
+            on in the background.. That's why I had fun recreating an
+            editor for my personal needs.
           `
   },
   {
-    title: 'Stromboli',
+    title: 'Memory',
     techno: 'Pure ES6 Vanilla',
     link: 'https://gracious-meitner-a15f62.netlify.com/',
     website: true,
     text: `
-            memory is a project I developed during my course at O'clock.io. 
-            It allows to work that memory while having fun. Several modes
-            of difficulty are proposed including: easy, normal, and
-            hard.
+            memory is a project I developed during my course at O'clock.io.
+            It allows you to work on your memory skills while having fun.
+            Several modes of difficulty are proposed including: easy, normal,
+            and hard.
           `
   },
   {
