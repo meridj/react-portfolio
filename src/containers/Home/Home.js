@@ -5,8 +5,6 @@ import TextLoop from 'react-text-loop';
 // Components
 import Header from '../../components/Header';
 import ScrollToTopOnMount from '../../components/ScrollToTopOnMount';
-import DiscoverMyWorld from '../../components/DiscoverMyWorld';
-import { Desktop } from '../../components/Responsive';
 
 // Styles
 import './Home.css';
@@ -34,9 +32,6 @@ const Home = () => (
         developer<br />based in Lyon, <span id="country">Fr</span>.
       </h1>
     </Fade>
-    <Desktop>
-      <DiscoverMyWorld />
-    </Desktop>
   </main>
 );
 

@@ -12,7 +12,7 @@
   grid-template-columns: 30% 30%;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 }
 
 #idea-to-reality {
@@ -76,6 +76,21 @@
     padding: 1.5em;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1440px) {
+  #works {
+    height: 100%;
+    margin-top: 3rem;
+  }
+  #works section {
+    margin-top: 4em;
+    display: grid;
+    padding: 0.5em;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
   }
 }

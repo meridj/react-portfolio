@@ -5,6 +5,7 @@
   align-items: center;
   height: calc(100vh - 3rem);
   margin-top: 3rem;
+  overflow: hidden;
 }
 
 #home-text {

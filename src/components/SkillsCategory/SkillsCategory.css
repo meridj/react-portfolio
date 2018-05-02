@@ -36,3 +36,9 @@
     padding: 1em 2em;
   }
 }
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1440px) {
+  .techno-name-container {
+    padding: 1em 2em;
+  }
+}
