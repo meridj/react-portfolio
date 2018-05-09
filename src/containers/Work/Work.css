@@ -9,32 +9,43 @@
 
 #works section {
   display: grid;
+  justify-content: center;
   grid-template-columns: 30% 30%;
   grid-template-rows: 1fr 1fr;
-  justify-content: center;
   grid-gap: 1rem;
+  outline: none;
 }
 
 #idea-to-reality {
+  align-self: center;
+  justify-self: center;
   text-align: center;
   z-index: 2;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  width: 50%;
+  padding: 2rem 2rem;
+  transition: 1s;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-variant: small-caps;
+  background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
+  box-shadow: 2px 2px 20px #7f00ff;
+  line-height: 2rem;
 }
 
 #idea-to-reality:hover {
-  text-decoration: underline;
+  background: #7f00ff;
+  box-shadow: 2px 2px 20px #e100ff;
 }
 
-#idea-to-reality span {
-  font-style: italic;
-  background: -webkit-linear-gradient(45deg, #7f00ff 10%, #e100ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 20px #7f00ff;
-  text-decoration: inherit;
-  text-decoration-color: indigo;
-  padding: 0 0.5em;
+#idea-to-reality:active {
+  outline: none;
+}
+#idea-to-reality:hover {
+  background: #7f00ff;
+  box-shadow: 2px 2px 20px #e100ff;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {

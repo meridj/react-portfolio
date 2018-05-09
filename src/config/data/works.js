@@ -38,23 +38,6 @@ const works = [
             Several modes of difficulty are proposed including: easy, normal,
             and hard.
           `
-  },
-  {
-    title: 'Stromboli',
-    link: 'http://www.google.fr/',
-    github: true,
-    website: true,
-    linkGithub: 'https://github.com/meridj/emaily',
-    text: `Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua
-                  Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua`,
-
-    techno: 'React + Redux'
   }
 ];
 

@@ -28,12 +28,12 @@ const Work = ({ history }) => (
     <Title title="My work" />
     <section>
       {works.map((work, key) => <CardWork data={work} key={key} />)}
+      <Fade top>
+        <button onClick={() => history.push('/contact')} id="idea-to-reality">
+          Turn your idea to reality
+        </button>
+      </Fade>
     </section>
-    <Fade top>
-      <p onClick={() => history.push('/contact')} id="idea-to-reality">
-        Now, let's turn your <span>idea</span> to <span>reality</span>!
-      </p>
-    </Fade>
   </div>
 );
 
