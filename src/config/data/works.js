@@ -30,10 +30,12 @@ const works = [
   {
     title: 'Memory',
     techno: 'Pure ES6 Vanilla',
-    link: 'https://gracious-meitner-a15f62.netlify.com/',
+    link: 'https://memory-games.netlify.com/',
+    linkGithub: 'https://github.com/meridj/memory',
+    github: true,
     website: true,
     text: `
-            memory is a project I developed during my course at O'clock.io.
+            Memory is a project I developed during my course at O'clock.io.
             It allows you to work on your memory skills while having fun.
             Several modes of difficulty are proposed including: easy, normal,
             and hard.
