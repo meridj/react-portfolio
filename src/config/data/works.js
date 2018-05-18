@@ -16,7 +16,7 @@ const works = [
   },
   {
     title: 'Markooldown',
-    techno: 'React',
+    techno: 'React + Redux',
     link: 'https://markooldown.netlify.com/',
     linkGithub: 'https://github.com/meridj/markooldown',
     github: true,
@@ -29,7 +29,7 @@ const works = [
   },
   {
     title: 'Memory',
-    techno: 'Pure ES6 Vanilla',
+    techno: 'Pure ES6 Vanilla + Babel + Webpack',
     link: 'https://memory-games.netlify.com/',
     linkGithub: 'https://github.com/meridj/memory',
     github: true,

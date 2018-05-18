@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Line } from 'rc-progress';
 import Fade from 'react-reveal/Fade';
@@ -13,7 +13,7 @@ import './Loading.css';
  * @param props => none
  *
  */
-class Loading extends Component {
+class Loading extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,6 +24,11 @@ class Loading extends Component {
 
   componentDidMount() {
     this.increase();
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem('loaded', true);
+    console.log(localStorage.getItem('loaded'));
   }
 
   increase() {

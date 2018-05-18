@@ -30,14 +30,17 @@ import './styles/index.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { mousePosition: [0, 0], loading: true };
+    this.state = {
+      mousePosition: [0, 0],
+      loading: localStorage.getItem('loaded') || false
+    };
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.handleLoading = this.handleLoading.bind(this);
   }
 
   handleLoading() {
     this.setState({
-      loading: false
+      loading: true
     });
   }
 
@@ -53,7 +56,7 @@ class App extends Component {
         <Desktop>
           <MouseFollower mousePosition={this.state.mousePosition} />
         </Desktop>
-        {this.state.loading ? (
+        {!this.state.loading ? (
           <Loading handleLoading={this.handleLoading} />
         ) : (
           <BrowserRouter>
